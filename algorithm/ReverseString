@@ -1,0 +1,27 @@
+package com.example.demo.utils;
+
+import org.apache.logging.log4j.util.Chars;
+
+import java.util.Arrays;
+
+public class ReverseString {
+
+
+    public static void main(String[] args) {
+
+        char[] s = "abcdefghijk".toCharArray();
+        reverse(s);
+        System.out.println(String.valueOf(s));
+    }
+
+    public static void reverse(char[] s) {
+
+        for (int l = 0, r = s.length - 1; l <= r; l++, r--) {
+            char tmp = s[l];
+            s[l] = s[r];
+            s[r] = tmp;
+        }
+
+    }
+
+}
